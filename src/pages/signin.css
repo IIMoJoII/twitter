@@ -1,0 +1,89 @@
+.sign-form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-form h1{
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.sign-form p{
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.sign-form__signin-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid #c4c4c4;
+    background-color: #ffffff;
+    width: 500px;
+    height: 300px;
+    position: absolute;
+}
+
+.signin-modal__form{
+    margin-top: 30px;
+    margin-left: -50px;
+    width: 400px;
+}
+
+.sign-form__signup-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #c4c4c4;
+    width: 600px;
+    height: 400px;
+}
+
+.signup-modal__form{
+    width: 400px;
+    z-index: 1000;
+    margin-top: 30px;
+    margin-left: -40px;
+}
+
+.signup-modal__lower{
+    display: flex;
+    flex-direction: row;
+}
+
+.signup-modal__register-btn{
+    margin-left: 52px;
+    width: 120px;
+}
+.signup-modal__agreement{
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    box-sizing: border-box;
+    margin-left: -30px;
+    align-items: center;
+    justify-content: center;
+    height: 17px;
+}
+
+.signin-modal__lower{
+    display: flex;
+    flex-direction: row;
+}
+
+.signin-modal__agreement{
+    width: 200px;
+}
+
+.signin-modal__register-btn{
+    width: 120px;
+    margin-left: 30px;
+}

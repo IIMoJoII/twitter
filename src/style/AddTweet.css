@@ -1,0 +1,16 @@
+.modal-make-news{
+    position: absolute;
+    background-color: white;
+    border: 2px solid #8fb1b3;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+
+    margin-top: calc(50vh - 250px);
+    margin-left: 250px;
+    height: 270px;
+    padding: 25px 10px 0px 10px;
+    z-index: 1000;
+}
+
+
