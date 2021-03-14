@@ -264,3 +264,9 @@
     opacity: 0.6;
     z-index: 999;
 }
+
+.centered{
+    margin-top: 20px;
+    justify-self: center;
+    align-self: center;
+}

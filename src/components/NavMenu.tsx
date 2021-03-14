@@ -63,7 +63,7 @@ const NavMenu = () => {
     return (
         <>
             <div className="nav-menu__fixed">
-                <h1>LOGO</h1>
+                <h1>SJV TRASH</h1>
                 <ul>
                     <li><span><AnnouncementIcon /></span>Новости</li>
                     <li><span><FiberNewIcon /></span>Новинки</li>
@@ -83,7 +83,7 @@ const NavMenu = () => {
                     />
                 </Button>
                 {visibleAddNews && <div className="modal">
-                    <AddTweet />
+                    <AddTweet onCloseAddNews={onCloseAddNews}/>
                     <div onClick={onCloseAddNews} className="black-screen"/>
                 </div>}
             </div>

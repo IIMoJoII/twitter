@@ -26,28 +26,33 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export const UserNews = () => {
+interface UserNewsProps {
+    text: string;
+    userUsername: string;
+    userFullname: string;
+    userAvatar: string;
+    key: string;
+}
+
+export const UserNews: React.FC<UserNewsProps> = ({text, userFullname, userUsername, userAvatar, key}): React.ReactElement => {
     const classes = useStyles();
 
     return (
         <>
             <div className="news__users-post">
                 <div className="posts__user-info">
-                    <img src={OurPhoto} alt="user-photo"/>
+                    <img src={`${userAvatar}`} alt="user-photo"/>
                     <div className="user__datas">
                         <div className="posts__users-post__username">
-                            <p>Анастасия Сысоева</p>
+                            <p>{userFullname}</p>
                         </div>
                         <div className="posts__users-post__usernickname">
-                            <p>@teamo</p>
+                            <p>@{userUsername}</p>
                         </div>
                     </div>
                 </div>
                 <div className="news__post-text">
-                    <p>Я настя, настя настя, я попка настя, настя попка, я настя попка-пиявка, попка-пиявка,
-                        пусть все знают что я настя - попка - пиявка моего парня Жени. Не дарите мне больше
-                        подарки, а то Женя вас всех задушит.
-                    </p>
+                    <p>{text}</p>
                 </div>
                 <div className="news__user-func-icons">
                     <div className={classes.newsIcons}>

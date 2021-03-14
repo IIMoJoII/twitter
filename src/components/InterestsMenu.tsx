@@ -122,7 +122,7 @@ const InterestsMenu = () => {
                     </div>
                     <div className="relevant-topics__box">
                         <div className="posts__user-info">
-                            <img src={OurPhoto} alt="user-photo"/>
+                            <img src={`https://source.unsplash.com/user/erondu/1600x900?3`} alt="user-photo"/>
                             <div className="user__datas">
                                 <div className="relevant-topics__box-username">
                                     <p className="username">Анастасия Сысоева</p>
