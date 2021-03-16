@@ -1,0 +1,44 @@
+.userInfo{
+    display: flex;
+    flex-direction: row;
+}
+
+.userInfo img{
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.postText{
+    width: 725px;
+    margin-left: 75px;
+    margin-top: -43px;
+    overflow-wrap: break-word;
+}
+
+
+.lowerBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 785px;
+    margin-bottom: 20px;
+}
+
+.userFuncIcons{
+    margin-top: 20px;
+    width: 220px;
+    margin-left: 83px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lowerBoxMaxLength{
+    position: absolute;
+    margin-left: 540px;
+    margin-top: 18px;
+}
+

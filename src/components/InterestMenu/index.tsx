@@ -1,10 +1,13 @@
 import React from 'react';
 
-import OurPhoto from "../img/we.jpg";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import { Input } from "antd";
 
 import PersonAddOutlinedIcon from "@material-ui/icons/PersonAddOutlined";
+import {TagsState} from "../../store/tags/contracts/state";
+
+import s from './style.module.css'
+import {userInfo} from "os";
 
 
 
@@ -86,47 +89,40 @@ const useStyles = makeStyles((theme) => ({
 
 }))
 
-const InterestsMenu = () => {
+interface InterestsMenuProps{
+    items: TagsState['items'],
+}
+
+const InterestsMenu: React.FC<InterestsMenuProps> = ({items}) => {
     const classes = useStyles();
     const onSearch = (value:string) => {console.log(value)};
 
     return (
         <>
-            <div className="interests-menu__fixed">
+            <div className={s.menuFixed}>
                 <Search placeholder="input search text" onSearch={onSearch} enterButton className={classes.FindInput}/>
 
-                <div className="relevant-topics">
-                    <div className="relevant-topics__box-header">
+                <div className={s.relevantTopics}>
+                    <div className={s.boxHeader}>
                         <h1>Актуальное</h1>
                     </div>
-                    <div className="relevant-topics__box">
-                        <span>Актуальное: Россия</span>
-                        <p>Спутник V</p>
-                    </div>
-                    <div className="relevant-topics__box">
-                        <span>Актуальное: Россия</span>
-                        <p>Мемы</p>
-                    </div>
-                    <div className="relevant-topics__box">
-                        <span>Актуальное: Россия</span>
-                        <p>Политика</p>
-                    </div>
-                    <div className="relevant-topics__box">
-                        <span>Актуальное: Россия</span>
-                        <p>Президент Путин</p>
-                    </div>
+                    {items.map((obj) => (<div key={obj._id} className={s.topicsBox}>
+                        <span>{obj.name}</span>
+                        <p>Откликов: {obj.count}</p>
+                    </div>))
+                    }
                 </div>
-                <div className="relevant-topics">
-                    <div className="relevant-topics__box-header">
+                <div className={s.relevantTopics}>
+                    <div className={s.boxHeader}>
                         <h1>Новые каналы</h1>
                     </div>
-                    <div className="relevant-topics__box">
-                        <div className="posts__user-info">
+                    <div className={s.topicsBox}>
+                        <div className={s.userInfo}>
                             <img src={`https://source.unsplash.com/user/erondu/1600x900?3`} alt="user-photo"/>
-                            <div className="user__datas">
-                                <div className="relevant-topics__box-username">
-                                    <p className="username">Анастасия Сысоева</p>
-                                    <p className="usernickname">@teamo</p>
+                            <div className={s.userDatas}>
+                                <div className={s.topicsUsername}>
+                                    <p className={s.username}>Анастасия Сысоева</p>
+                                    <p className={s.usernickname}>@teamo</p>
                                 </div>
                             </div>
                             <PersonAddOutlinedIcon className={classes.PersonAdd}/>

@@ -1,0 +1,63 @@
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 1400px;
+    height: max-content;
+}
+
+.navMenu{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 800px;
+    z-index: 10;
+}
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 800px;
+    z-index: 9;
+}
+
+.postsHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 800px;
+    justify-content: space-between;
+    height: 40px;
+    border-right: 1px solid #bcc9d2;
+    border-left: 1px solid #bcc9d2;
+}
+
+.postsHeader h1{
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.userPost{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #bcc9d2;
+}
+
+.news{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.centered{
+    margin-top: 20px;
+    justify-self: center;
+    align-self: center;
+}
+
+.interestsMenu{
+    width: 300px;
+    height: 800px;
+    z-index: 8;
+}

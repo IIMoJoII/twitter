@@ -13,9 +13,9 @@ import PersonIcon from "@material-ui/icons/Person";
 import MoreIcon from "@material-ui/icons/More";
 import AddIcon from "@material-ui/icons/Add";
 
-import AddTweet from "./AddTweet";
+import AddTweet from "../AddTweetModal";
 
-import '../style/NavMenu.css'
+import s from './style.module.css'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -62,7 +62,7 @@ const NavMenu = () => {
 
     return (
         <>
-            <div className="nav-menu__fixed">
+            <div className={s.navMenuFixed}>
                 <h1>SJV TRASH</h1>
                 <ul>
                     <li><span><AnnouncementIcon /></span>Новости</li>
@@ -84,7 +84,7 @@ const NavMenu = () => {
                 </Button>
                 {visibleAddNews && <div className="modal">
                     <AddTweet onCloseAddNews={onCloseAddNews}/>
-                    <div onClick={onCloseAddNews} className="black-screen"/>
+                    <div onClick={onCloseAddNews} className={s.blackScreen}/>
                 </div>}
             </div>
 

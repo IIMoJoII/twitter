@@ -9,7 +9,9 @@ import GifIcon from "@material-ui/icons/Gif";
 import HelpIcon from "@material-ui/icons/Help";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import ScheduleIcon from "@material-ui/icons/Schedule";
-import MyPhoto from "../img/myPhoto.png";
+import MyPhoto from "../../img/myPhoto.png";
+
+import s from './style.module.css'
 
 
 
@@ -67,10 +69,10 @@ const UserMakeNews: React.FC<UserMakeNewsProps> = ({min_rows, max_rows}): React.
 
     return (
         <>
-            <div className="posts__user-info">
+            <div className={s.userInfo}>
                 <img src={MyPhoto} alt="user-photo"/>
             </div>
-            <div className="posts__post-text">
+            <div className={s.postText}>
                 <TextArea
                     onChange={handleChangeTextarea}
                     className={classes.postTextInput}
@@ -79,15 +81,15 @@ const UserMakeNews: React.FC<UserMakeNewsProps> = ({min_rows, max_rows}): React.
                     value={text}
                 />
             </div>
-            <div className="posts__lover-box">
-                <div className="posts__user-func-icons">
+            <div className={s.lowerBox}>
+                <div className={s.userFuncIcons}>
                     <ImageIcon className={classes.postIcons}/>
                     <GifIcon className={classes.postIcons}/>
                     <HelpIcon className={classes.postIcons}/>
                     <InsertEmoticonIcon className={classes.postIcons}/>
                     <ScheduleIcon className={classes.postIcons}/>
                 </div>
-                {text && <span className="posts__lover-box__max-length">{textCount}</span>}
+                {text && <span className={s.lowerBoxMaxLength}>{textCount}</span>}
                 {text && <CircularProgress
                     className={classes.CircularProgress}
                     size={25}

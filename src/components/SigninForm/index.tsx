@@ -1,6 +1,6 @@
 import { Form, Input, Button, Checkbox } from 'antd';
-import '../pages/signin.css'
 
+import s from './style.module.css'
 
 
 const layout = {
@@ -22,7 +22,7 @@ export const SigninForm = () => {
 
     return (
         <Form
-            className="signin-modal__form"
+            className={s.signinModal}
             {...layout}
     name="basic"
     initialValues={{ remember: true }}
@@ -45,13 +45,13 @@ export const SigninForm = () => {
         <Input.Password />
         </Form.Item>
 
-            <div className="signin-modal__lower">
+            <div className={s.signinModalLower}>
         <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-        <Checkbox className="signin-modal__agreement">Remember me</Checkbox>
+        <Checkbox className={s.signinModalAgreement}>Remember me</Checkbox>
     </Form.Item>
 
     <Form.Item {...tailLayout}>
-    <Button className="signin-modal__register-btn" type="primary" htmlType="submit">
+    <Button className={s.registerBtn} type="primary" htmlType="submit">
         Submit
         </Button>
 

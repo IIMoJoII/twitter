@@ -1,47 +1,11 @@
 import React, { useState } from 'react';
 
-import { Form, Input, Tooltip, Select, Checkbox, Button } from 'antd';
+import { Form, Input, Tooltip, Checkbox, Button } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 
-import '../pages/signin.css'
+import s from './style.module.css'
 
 
-
-const { Option } = Select;
-const residences = [
-  {
-    value: 'zhejiang',
-    label: 'Zhejiang',
-    children: [
-      {
-        value: 'hangzhou',
-        label: 'Hangzhou',
-        children: [
-          {
-            value: 'xihu',
-            label: 'West Lake',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    value: 'jiangsu',
-    label: 'Jiangsu',
-    children: [
-      {
-        value: 'nanjing',
-        label: 'Nanjing',
-        children: [
-          {
-            value: 'zhonghuamen',
-            label: 'Zhong Hua Men',
-          },
-        ],
-      },
-    ],
-  },
-];
 const formItemLayout = {
   labelCol: {
     xs: { span: 24 },
@@ -70,30 +34,10 @@ export const RegistrationForm = () => {
   const onFinish = (values: any) => {
     console.log('Received values of form: ', values);
   };
-  const prefixSelector = (
-    <Form.Item name="prefix" noStyle>
-      <Select style={{ width: 70 }}>
-        <Option value="86">+86</Option>
-        <Option value="87">+87</Option>
-      </Select>
-    </Form.Item>
-  );
-  const [autoCompleteResult, setAutoCompleteResult] = useState<string[]>([]);
-  const onWebsiteChange = (value: string) => {
-    if (!value) {
-      setAutoCompleteResult([]);
-    } else {
-      setAutoCompleteResult(['.com', '.org', '.net'].map(domain => `${value}${domain}`));
-    }
-  };
-  const websiteOptions = autoCompleteResult.map(website => ({
-    label: website,
-    value: website,
-  }));
 
   return (
     <Form
-        className="signup-modal__form"
+        className={s.signupModal}
       {...formItemLayout}
       form={form}
       name="register"
@@ -174,7 +118,7 @@ export const RegistrationForm = () => {
       </Form.Item>
 
 
-      <div className="signup-modal__lower">
+      <div className={s.signupModalLower}>
         <Form.Item
           name="agreement"
           valuePropName="checked"
@@ -186,12 +130,12 @@ export const RegistrationForm = () => {
           ]}
           {...tailFormItemLayout}
         >
-          <Checkbox className="signup-modal__agreement">
+          <Checkbox className={s.signupModalAgreement}>
             I have read the <a href="">agreement</a>
           </Checkbox>
         </Form.Item>
         <Form.Item {...tailFormItemLayout}>
-          <Button className="signup-modal__register-btn" type="primary" htmlType="submit">
+          <Button className={s.registerBtn} type="primary" htmlType="submit">
             Register
           </Button>
         </Form.Item>

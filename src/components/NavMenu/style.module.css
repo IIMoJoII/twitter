@@ -1,0 +1,42 @@
+.navMenuFixed{
+    position: fixed;
+}
+
+.navMenuFixed h1{
+    margin-left: 20px;
+}
+
+.navMenuFixed ul {
+    margin-left: -28px;
+}
+
+.navMenuFixed ul li{
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 20px;
+    list-style-type: none;
+    display: flex;
+    width: 200px;
+}
+
+
+.navMenuFixed ul li:hover{
+    background-color: rgba(85, 151, 181, 0.15);
+}
+
+.navMenuFixed ul span{
+    margin-right: 20px;
+    margin-top: 3px;
+    margin-left: 10px;
+}
+
+.blackScreen{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.1;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+}

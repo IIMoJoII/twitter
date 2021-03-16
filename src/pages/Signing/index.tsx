@@ -4,10 +4,10 @@ import CloseIcon from '@material-ui/icons/Close';
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import { Button } from 'antd';
 
-import '../antd.css'
-import './signin.css'
-import {RegistrationForm} from "../components/RegistrationForm";
-import {SigninForm} from "../components/SignInForm";
+import '../../antd.css'
+import {RegistrationForm} from "../../components/RegistrationForm";
+import {SigninForm} from "../../components/SigninForm";
+import s from './style.module.css'
 
 const useStyles = makeStyles((theme) => ({
     loginSideTwitterIcon:{
@@ -67,7 +67,7 @@ function SignIn() {
 
     return(
         <>
-            <form className='sign-form'>
+            <form className={s.signForm}>
                 <TwitterIcon color="primary" className={classes.loginSideTwitterIcon}/>
                 <h1>Узнайте чем занимаются люди по всему миру</h1>
 
@@ -75,11 +75,11 @@ function SignIn() {
 
                 <Button onClick={handleOpenSignUp} className={classes.signupBtn} type="primary">Зарегестрироваться</Button>
                 <Button onClick={handleOpen} className={classes.signinBtn} type="default">Войти</Button>
-                {openSignup && <div className="sign-form__signup-modal">
+                {openSignup && <div className={s.signupModal}>
                     <CloseIcon onClick={handleCloseSignup} className={classes.loginSideCloseSignupIcon}/>
                     <RegistrationForm/>
                 </div>}
-                {open && <div className="sign-form__signin-modal">
+                {open && <div className={s.signinModal}>
                     <CloseIcon onClick={handleClose} className={classes.loginSideCloseIcon}/>
                     <SigninForm />
                 </div>}

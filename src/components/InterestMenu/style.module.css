@@ -1,0 +1,85 @@
+.menuFixed{
+    position: fixed;
+}
+
+.relevantTopics{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.boxHeader{
+    background-color: rgba(85, 151, 181, 0.1);
+    display: flex;
+    border: 1px solid rgba(85, 151, 181, 0.2);
+    height: 65px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.relevantTopics h1{
+    margin-left: 20px;
+    font-size: 25px;
+}
+
+.topicsBox{
+    background-color: rgba(85, 151, 181, 0.1);
+    display: flex;
+    border: 1px solid rgba(85, 151, 181, 0.2);
+    height: 65px;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.topicsBox:hover{
+    background-color: rgba(85, 151, 181, 0.14);
+    border: 1px solid rgba(85, 151, 181, 0.24);
+}
+
+.topicsBox p{
+    margin-left: 20px;
+    color: rgb(141, 147, 153);
+}
+
+.topicsBox span{
+    margin-left: 20px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.userDatas{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.topicsUsername .username{
+    font-weight: bold;
+    margin-top: 4px;
+    color: black;
+}
+
+.topicsUsername .usernickname{
+    font-size: 16px;
+    color: #64676e;
+    margin-top: 4px;
+}
+
+.relevantTopics img{
+    margin-top: 0px;
+}
+
+.userInfo{
+    display: flex;
+    flex-direction: row;
+}
+
+.userInfo img{
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    margin-left: 10px;
+}

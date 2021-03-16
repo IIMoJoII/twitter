@@ -1,0 +1,131 @@
+{
+  "tweets": [
+    {
+      "_id": "604bb518d0bded2dda89f236",
+      "text": "Lorem sint anim mollit laboris ut exercitation ipsum.",
+      "user": {
+        "fullname": "Clemons Palmer",
+        "username": "tanisha",
+        "avatarURL": "https://source.unsplash.com/user/erondu/1600x900?3"
+      }
+    },
+    {
+      "_id": "604bb518881321856d196765",
+      "text": "Amet est proident pariatur incididunt irure nisi qui minim.",
+      "user": {
+        "fullname": "Tania Moore",
+        "username": "knapp",
+        "avatarURL": "https://source.unsplash.com/user/erondu/1600x900?4"
+      }
+    },
+    {
+      "_id": "604bb518253478f0c346eb7c",
+      "text": "Cupidatat cillum Lorem aliquip duis irure ipsum sint enim dolor magna esse reprehenderit incididunt anim.",
+      "user": {
+        "fullname": "Belinda Hartman",
+        "username": "wilder",
+        "avatarURL": "https://source.unsplash.com/user/erondu/1600x900?1"
+      }
+    },
+    {
+      "_id": "604bb51898444463ad9ab562",
+      "text": "Incididunt velit aliquip est adipisicing ea.",
+      "user": {
+        "fullname": "Pitts Castaneda",
+        "username": "charity",
+        "avatarURL": "https://source.unsplash.com/user/erondu/1600x900?5"
+      }
+    },
+    {
+      "_id": "604bb518891c0011626f0cdb",
+      "text": "Labore laborum deserunt dolore culpa sunt incididunt veniam nulla magna.",
+      "user": {
+        "fullname": "Fulton Pope",
+        "username": "elsie",
+        "avatarURL": "https://source.unsplash.com/user/erondu/1600x900?1"
+      }
+    },
+    {
+      "_id": "604bb518aa8e0290d6b6e37b",
+      "text": "Duis nostrud aliqua enim magna nostrud nulla excepteur aliqua.",
+      "user": {
+        "fullname": "Berg Blackburn",
+        "username": "odessa",
+        "avatarURL": "https://source.unsplash.com/user/erondu/1600x900?3"
+      }
+    },
+    {
+      "_id": "604bb5189758425ddb93ac94",
+      "text": "Amet aute magna occaecat eiusmod nulla minim nisi amet incididunt exercitation.",
+      "user": {
+        "fullname": "Claudette Gross",
+        "username": "lynne",
+        "avatarURL": "https://source.unsplash.com/user/erondu/1600x900?5"
+      }
+    },
+    {
+      "_id": "604bb518144016b5499e01b1",
+      "text": "Culpa laboris fugiat amet esse esse Lorem irure in eiusmod sit esse commodo minim nostrud.",
+      "user": {
+        "fullname": "Dana Manning",
+        "username": "natalia",
+        "avatarURL": "https://source.unsplash.com/user/erondu/1600x900?3"
+      }
+    },
+    {
+      "_id": "604bb51824899209e3c3d28d",
+      "text": "Culpa ipsum mollit magna consectetur tempor dolor in in duis.",
+      "user": {
+        "fullname": "Nash Gill",
+        "username": "wall",
+        "avatarURL": "https://source.unsplash.com/user/erondu/1600x900?2"
+      }
+    },
+    {
+      "_id": "604bb5188c9e338c05ff36a1",
+      "text": "Proident mollit duis reprehenderit cillum enim esse ex occaecat officia laboris.",
+      "user": {
+        "fullname": "Greene Acevedo",
+        "username": "kim",
+        "avatarURL": "https://source.unsplash.com/user/erondu/1600x900?5"
+      }
+    }
+  ],
+  "themes": [
+    {
+      "name": "#RussianHistory", "count": 128
+    },
+    {
+      "name": "#Навальный", "count":  121
+    },
+    {
+      "name": "#Гитлер", "count":  281
+    },
+    {
+      "name": "#Беларусь", "count":  311
+    }
+  ],
+  "users": [
+    {
+      "fullname": "Nash Gill",
+      "username": "wall",
+      "avatarURL": "https://source.unsplash.com/user/erondu/1600x900?2"
+    },
+    {
+      "fullname": "Berg Blackburn",
+      "username": "odessa",
+      "avatarURL": "https://source.unsplash.com/user/erondu/1600x900?3"
+    },
+    {
+      "fullname": "Belinda Hartman",
+      "username": "wilder",
+      "avatarURL": "https://source.unsplash.com/user/erondu/1600x900?1"
+    }
+  ],
+  "user": {
+    "_id": "604bb5188c9e338c05ff36a1",
+    "fullname": "Alekseev Euggene",
+    "username": "mojodesuga",
+    "avatarURL": "https://source.unsplash.com/user/erondu/1600x900?5"
+  }
+}

@@ -1,10 +1,11 @@
 import React from 'react';
 import CloseIcon from "@material-ui/icons/Close";
-import UserMakeNews from "./UserMakeNews";
+
 import makeStyles from "@material-ui/core/styles/makeStyles";
 
 
-import '../style/AddTweet.css'
+import s from './style.module.css'
+import UserMakeNews from "../UserMakePost";
 
 
 
@@ -34,7 +35,7 @@ const AddTweet: React.FC<AddTweetProps> = ({onCloseAddNews}): React.ReactElement
 
     return(
         <>
-            <div className="modal-make-news">
+            <div className={s.modal}>
                 <CloseIcon onClick={closeAddNewsCallback} className={classes.loginSideCloseSignupIcon}/>
                 <UserMakeNews min_rows={6} max_rows={6}/>
             </div>

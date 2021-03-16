@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route } from 'react-router-dom'
 
-import HomePage from "./pages/HomePage";
-import SignIn from "./pages/signin";
+import HomePage from "./pages/Home";
+import SignIn from "./pages/Signing";
 
 import './App.css'
 
