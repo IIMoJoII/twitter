@@ -5,9 +5,14 @@ import { Input } from "antd";
 
 import PersonAddOutlinedIcon from "@material-ui/icons/PersonAddOutlined";
 import {TagsState} from "../../store/tags/contracts/state";
+import {Link} from 'react-router-dom'
 
+import CircularProgress from '@material-ui/core/CircularProgress';
 import s from './style.module.css'
-import {userInfo} from "os";
+import {useDispatch, useSelector} from "react-redux";
+import {selectIsTagsLoading} from "../../store/tags/selectors";
+import {selectTagsItems} from "../../store/tags/selectors";
+import {fetchTags} from "../../store/tags/actionCreators";
 
 
 
@@ -90,12 +95,19 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 interface InterestsMenuProps{
-    items: TagsState['items'],
+
 }
 
-const InterestsMenu: React.FC<InterestsMenuProps> = ({items}) => {
+const InterestsMenu: React.FC<InterestsMenuProps> = () => {
     const classes = useStyles();
     const onSearch = (value:string) => {console.log(value)};
+    const isLoadingTags = useSelector(selectIsTagsLoading)
+    const dispatch = useDispatch()
+    const tags = useSelector(selectTagsItems);
+
+    React.useEffect(() => {
+        dispatch(fetchTags());
+    }, [dispatch])
 
     return (
         <>
@@ -106,10 +118,14 @@ const InterestsMenu: React.FC<InterestsMenuProps> = ({items}) => {
                     <div className={s.boxHeader}>
                         <h1>Актуальное</h1>
                     </div>
-                    {items.map((obj) => (<div key={obj._id} className={s.topicsBox}>
-                        <span>{obj.name}</span>
-                        <p>Откликов: {obj.count}</p>
-                    </div>))
+                    {isLoadingTags ? <div className={s.centered}><CircularProgress /></div> : tags.map((obj) => (
+                        <div key={obj._id} className={s.topicsBox}>
+                            <Link to={`/home/search?q=${obj.name}`}>
+                                <span>{obj.name}</span>
+                                <p>Откликов: {obj.count}</p>
+                            </Link>
+                        </div>
+                    ))
                     }
                 </div>
                 <div className={s.relevantTopics}>

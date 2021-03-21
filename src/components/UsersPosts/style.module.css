@@ -3,6 +3,10 @@
     margin-top: -1px;
 }
 
+.usersPost:hover{
+    background-color: #f7fbff;
+}
+
 .userInfo{
     display: flex;
     flex-direction: row;

@@ -12,6 +12,7 @@ import QueueIcon from "@material-ui/icons/Queue";
 import PersonIcon from "@material-ui/icons/Person";
 import MoreIcon from "@material-ui/icons/More";
 import AddIcon from "@material-ui/icons/Add";
+import {Link} from 'react-router-dom'
 
 import AddTweet from "../AddTweetModal";
 
@@ -63,7 +64,7 @@ const NavMenu = () => {
     return (
         <>
             <div className={s.navMenuFixed}>
-                <h1>SJV TRASH</h1>
+                <Link to="/home"><h1>SJV TRASH</h1></Link>
                 <ul>
                     <li><span><AnnouncementIcon /></span>Новости</li>
                     <li><span><FiberNewIcon /></span>Новинки</li>
